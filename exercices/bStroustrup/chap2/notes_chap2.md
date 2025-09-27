@@ -53,3 +53,23 @@ int sz; // number of elements
 double∗ elem; // pointer to elements
 }
 ***
+
+#### Classes
+class Vector {
+public:
+Vector(int s) :elem{new double[s]}, sz{s} { } // constr uct a Vector
+double& operator[](int i) { return elem[i]; } // element access: subscripting
+int size() { return sz; }
+private:
+double∗ elem; // pointer to the elements
+int sz; // the number of elements
+};
+
+#### Enumerations
+In addition to classes, C++ supports a simple form of user-defined type for which we can enumerate the values:
+***
+enum class Color { red, blue , green };
+enum class Traffic_light { green, yellow, red };
+Color col = Color::red;
+Traffic_light light = Traffic_light::red;
+***
